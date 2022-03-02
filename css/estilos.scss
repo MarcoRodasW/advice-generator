@@ -1,0 +1,137 @@
+$Light_Cyan: hsl(193, 38%, 86%);
+$Neon_Green: hsl(150, 100%, 66%);
+$Grayish_Blue: hsl(217, 19%, 38%);
+$Dark_Grayish_Blue: hsl(222, 21%, 16%);
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   display: grid;
+   place-content: center;
+   height: 100vh; 
+   background-color: hsl(215, 18%, 20%);
+   font-size: 28px;
+   font-family: 'Manrope', sans-serif;
+}
+
+.card{
+   width: 600px;
+   height: 350px;
+   background-color: hsl(222, 21%, 16%);
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 60px 1fr 70px;
+   border-radius: 20px;
+   padding: 20px;
+   box-shadow: 0px 7px 22px -4px rgba(32,37,49,0.75);
+
+   &__title{
+      color: $Neon_Green;
+      text-align: center;
+      font-size: 20px;
+      margin: auto;
+      p{
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      }
+   }
+   &__content{
+      color: $Light_Cyan;
+      text-align: center;
+      margin: auto;
+   }
+
+   &__footer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+
+      .divider-mobile{
+         display: none;
+      }
+
+      .random{
+         position: absolute;
+         top: 60px;
+         width: 60px;
+         height: 60px;
+         border-color: transparent;
+         border-radius: 50%;
+         cursor: pointer;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: $Neon_Green;
+
+         &:hover{
+            box-shadow: -1px 4px 20px 6px rgba(82,255,168,0.74);
+         }
+         img{
+            width: 70%;
+            object-fit: contain;
+         }
+
+      }
+   }
+
+}
+
+
+.spin-in{
+   animation-name: spin-in;
+   animation-duration: 500ms;
+   animation-timing-function: linear;
+}
+@keyframes spin-in{
+   from {
+       transform:rotate(0deg);
+   }
+   to {
+       transform:rotate(360deg);
+   }
+}
+
+.spin-out{
+   animation-name: spin-out;
+   animation-duration: 500ms;
+   animation-timing-function: linear;
+}
+@keyframes spin-out {
+   from {
+       transform:rotate(360deg);
+   }
+   to {
+       transform:rotate(0deg);
+   }
+}
+
+@media (max-width: 600px) {
+   .card{
+      width: 450px;
+
+
+      &__footer{
+
+         .divider-mobile{
+            display: inline-block;
+         }
+
+         .divider-desktop{
+            display: none;
+         }
+      }
+   }
+}
+
+@media (max-width: 450px) {
+   .card{
+      width: 100vw;
+   }
+}

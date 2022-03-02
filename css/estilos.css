@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: #2a313c;
+  font-size: 28px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.card {
+  width: 600px;
+  height: 350px;
+  background-color: #202531;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 60px 1fr 70px;
+      grid-template-rows: 60px 1fr 70px;
+  border-radius: 20px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 7px 22px -4px rgba(32, 37, 49, 0.75);
+          box-shadow: 0px 7px 22px -4px rgba(32, 37, 49, 0.75);
+}
+
+.card__title {
+  color: #52ffa8;
+  text-align: center;
+  font-size: 20px;
+  margin: auto;
+}
+
+.card__title p {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.card__content {
+  color: #cee3e9;
+  text-align: center;
+  margin: auto;
+}
+
+.card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.card__footer .divider-mobile {
+  display: none;
+}
+
+.card__footer .random {
+  position: absolute;
+  top: 60px;
+  width: 60px;
+  height: 60px;
+  border-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #52ffa8;
+}
+
+.card__footer .random:hover {
+  -webkit-box-shadow: -1px 4px 20px 6px rgba(82, 255, 168, 0.74);
+          box-shadow: -1px 4px 20px 6px rgba(82, 255, 168, 0.74);
+}
+
+.card__footer .random img {
+  width: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.spin-in {
+  -webkit-animation-name: spin-in;
+          animation-name: spin-in;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin-in {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-in {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.spin-out {
+  -webkit-animation-name: spin-out;
+          animation-name: spin-out;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin-out {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes spin-out {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 450px;
+  }
+  .card__footer .divider-mobile {
+    display: inline-block;
+  }
+  .card__footer .divider-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: 100vw;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */

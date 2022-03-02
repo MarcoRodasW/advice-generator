@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon-dice.svg">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <title>Frontend Mentor | Advice generator app</title>
+  <script defer src="/js/main.js"></script>
+</head>
+<body>
+  <div class="card">
+    <div class="card__title">
+      <p>advice #<span id="adviceid"></span></p>
+    </div>
+    <div class="card__content">
+      <p id="advice">
+        <!-- Advice content here -->
+      </p>
+    </div>
+    <div class="card__footer">
+      <img src="/images/pattern-divider-desktop.svg" alt="" class="divider-desktop">
+      <img src="/images/pattern-divider-mobile.svg" alt="" class="divider-mobile">
+      <button class="random" id="random">
+        <img class="spin" id="dice" src="/images/icon-dice.svg" alt="">
+      </button>
+    </div>
+  </div>
+</body>
+</html>

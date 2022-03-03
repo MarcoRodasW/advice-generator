@@ -7,13 +7,30 @@
 }
 
 body {
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
+  width: 100vw;
   background-color: #2a313c;
   font-size: 28px;
   font-family: 'Manrope', sans-serif;
+}
+
+.headline {
+  color: #cee3e9;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .card {
@@ -103,6 +120,12 @@ body {
      object-fit: contain;
 }
 
+.instruction {
+  margin-top: 50px;
+  color: #cee3e9;
+  font-size: 16px;
+}
+
 .spin-in {
   -webkit-animation-name: spin-in;
           animation-name: spin-in;
@@ -166,11 +189,16 @@ body {
 }
 
 @media (max-width: 600px) {
+  .headline {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+  }
   .card {
     width: 450px;
   }
   .card__footer .divider-mobile {
-    display: inline-block;
+    display: block;
   }
   .card__footer .divider-desktop {
     display: none;
@@ -179,7 +207,10 @@ body {
 
 @media (max-width: 450px) {
   .card {
-    width: 100vw;
+    width: 100%;
+  }
+  .card__footer .divider-mobile {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
